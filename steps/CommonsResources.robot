@@ -22,11 +22,6 @@ Então o cadastro deve ocorrer sem sucesso (status_code=${status_code})
     Conferir o status da requisição    ${status_code}    ${response}
 
 # ----- E
-E deve ser retonado a mensagem "${MENSAGEM}"
-    Should Be Equal    ${MENSAGEM}    Cadastro realizado com sucesso
-
-E deve ser retonado a mensagem de erro "${MENSAGEM}"
-    Conferir mensagem de erro    ${response.json()}    ${mensagem}
 
 # ---- STEPS
 
@@ -42,16 +37,16 @@ Conferir o status da requisição
 
 Conferir mensagem de erro
     [Arguments]  ${response_erro}  ${mensagem}
-    IF    '${TEST_TAGS[0]}' == 'CT02'
+    IF    '${TEST_TAGS[0]}' == 'CT02' or '${TEST_TAGS[0]}' == 'CT07' 
         Log To Console    Erro retornado pela api:${response_erro["nome"]}
-    ELSE IF    '${TEST_TAGS[0]}' == 'CT03'
+    ELSE IF    '${TEST_TAGS[0]}' == 'CT03' or '${TEST_TAGS[0]}' == 'CT08' 
         Log To Console    Erro retornado pela api:${response_erro["email"]}
-    ELSE IF    '${TEST_TAGS[0]}' == 'CT04'
+    ELSE IF    '${TEST_TAGS[0]}' == 'CT04' or '${TEST_TAGS[0]}' == 'CT09'
         Log To Console    Erro retornado pela api:${response_erro["password"]}
-    ELSE IF    '${TEST_TAGS[0]}' == 'CT05'
+    ELSE IF    '${TEST_TAGS[0]}' == 'CT05' or '${TEST_TAGS[0]}' == 'CT10'
         Log To Console    Erro retornado pela api:${response_erro["administrador"]}
     ELSE
-        Log To Console    Erro retornado pela api:${response_erro["mensagem"]}
+        Log To Console    Erro retornado pela api:${response_erro["message"]}
     END  
  
     Log    ${response_erro}
