@@ -18,7 +18,7 @@ Quando realizo um cadastro de usuario
     ELSE
         Criar um usuario aleatorio
     END
-    ${BODY}    Format String    C:/testesAPI/resources/data/${TEST_TAGS[0]}.json
+    ${BODY}    Format String    C:/testesAPI/resources/data/API_Cadastro/${TEST_TAGS[0]}.json
     ...    nome=${NOME}
     ...    email_teste=${EMAIL_TESTE}
     ${response}    POST On Session    ${ALIAS}    ${URL}${ENDEPONT_USUARIOS}    
