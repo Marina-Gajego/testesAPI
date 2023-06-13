@@ -15,10 +15,10 @@ Dado que estou conectado na api
 
 # ---- ENTÃO
 
-Então o cadastro deve ocorrer com sucesso (status_code=${status_code})
+Então a requisição deve ocorrer com sucesso (status_code=${status_code})
     Conferir o status da requisição    ${status_code}    ${response}
 
-Então o cadastro deve ocorrer sem sucesso (status_code=${status_code})
+Então a requisição deve ocorrer sem sucesso (status_code=${status_code})
     Conferir o status da requisição    ${status_code}    ${response}
 
 # ----- E

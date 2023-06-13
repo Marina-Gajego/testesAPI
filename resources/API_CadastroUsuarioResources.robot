@@ -13,12 +13,12 @@ Resource   ../steps/CommonsResources.robot
 
 # ---- QUANDO
 Quando realizo um cadastro de usuario
-    IF    '${TEST_TAGS[0]}' == 'CT12'
+    IF    '${TEST_TAGS[0]}' == 'S01CT12'
         Quando realizo um cadastro de usuario com um email já existente
     ELSE
         Criar um usuario aleatorio
     END
-    ${BODY}    Format String    C:/testesAPI/resources/data/API_Cadastro/${TEST_TAGS[0]}.json
+    ${BODY}    Format String    C:/Users/mgaje/OneDrive/Área de Trabalho/testesAPI/resources/data/API_Cadastro/${TEST_TAGS[0]}.json
     ...    nome=${NOME}
     ...    email_teste=${EMAIL_TESTE}
     ${response}    POST On Session    ${ALIAS}    ${URL}${ENDEPONT_USUARIOS}    
