@@ -3,5 +3,6 @@
 Utilizando como base o site: https://serverest.dev/
 <br/>
 Realizando a automação das api's
-![image](https://github.com/Marina-Gajego/testesAPI/assets/83456621/27e40b25-ae67-4094-9a44-f8d7274d812b)
+OBS: não foi possivel automatizar as pais do tipo DELETE E PUT, pois os id's retornados são valores aleatorios e seria necessario uma conferencia em uma base de dados.
+![image](https://github.com/Marina-Gajego/testesAPI/assets/83456621/ade5d5a8-8170-4344-af63-04506805e2c8)
 <br/>
