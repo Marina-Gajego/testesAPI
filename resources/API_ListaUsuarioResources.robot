@@ -5,8 +5,6 @@ Library    String
 Library    Collections
 Resource   ../steps/CommonsResources.robot
 
-*** Variables ***
-
 *** Keywords ***
 
 # ---- DADO
@@ -19,12 +17,7 @@ Quando realizo a requisição da api de um usuario especifico
     Requisição da api com um usuario especifico
 
 Quando realizo a requisição da api informando apenas o campo id
-    IF    '${TEST_TAGS[0]}' == 'S02CT05'
-        Set Test Variable     ${keys}    ?_id=00000000000
-    ELSE
-        Set Test Variable     ${keys}    ?_id=0uxuPY0cbmQhpEz1
-    END
-
+    Set Test Variable     ${keys}    ?_id=00000000000
     Requisição da api com um usuario especifico
 
 Quando realizo a requisição da api informando apenas o campo nome
@@ -40,7 +33,7 @@ Quando realizo a requisição da api informando apenas o campo email
     IF    '${TEST_TAGS[0]}' == 'S02CT09'
         Set Test Variable     ${keys}    ?email=marina%40qualidade.com
     ELSE
-        Set Test Variable     ${keys}    ?email=fulano%40qa.com
+        Set Test Variable     ${keys}    ?email=beltrano%40qa.com.br
     END
 
     Requisição da api com um usuario especifico
@@ -80,7 +73,7 @@ Requisição da api com um usuario especifico
     IF    '${TEST_TAGS[0]}' == 'S02CT02'
         Set Test Variable     ${keys}     ?nome=Usuario%20Nao%20Existente&email=fulano%40qa.com&password=teste&administrador=true
     ELSE IF    '${TEST_TAGS[0]}' == 'S02CT03'
-        Set Test Variable     ${keys}     ?nome=Fulano%20da%20Silva&email=fulano%40qa.com&password=teste&administrador=true
+        Set Test Variable     ${keys}     ?nome=Fulano%20da%20Silva&email=beltrano%40qa.com.br&password=teste&administrador=true
     END
     ${response}    GET On Session    ${ALIAS}    ${URL}${ENDEPONT_USUARIOS}${keys}
     ...     expected_status=any

@@ -26,12 +26,13 @@ CT03: Buscar um usuario informando todos os campos - Sucesso
     Então a requisição deve ocorrer com sucesso (status_code=200)
     E verifico se existe registro de usuarios retornados
 
-CT04: Buscar um usuario informando apenas o campo id - Sucesso
-    [Tags]    S02CT04
-    Dado que estou conectado na api
-    Quando realizo a requisição da api informando apenas o campo id
-    Então a requisição deve ocorrer com sucesso (status_code=200)
-    E verifico se existe registro de usuarios retornados
+#Necessario uma base de dados para armazenar o id
+# CT04: Buscar um usuario informando apenas o campo id - Sucesso
+#     [Tags]    S02CT04
+#     Dado que estou conectado na api
+#     Quando realizo a requisição da api informando apenas o campo id
+#     Então a requisição deve ocorrer com sucesso (status_code=200)
+#     E verifico se existe registro de usuarios retornados
 
 CT05: Buscar um usuario informando apenas o campo id - (motivo falha: passando um id inexistente)
     [Tags]    S02CT05
